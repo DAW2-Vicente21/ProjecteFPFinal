@@ -1,0 +1,31 @@
+/* TOP */
+
+.topColor{
+	background-color: #1e8a71;
+}
+
+/* MENU */
+
+.navbar-nav > li {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+/* BODY */
+
+body{
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	background-color: gray;
+}
+
+.body{
+	background-color: gray;
+}
+
+/* FOOTER */
+
+.footer{
+	margin-top: auto;
+}
