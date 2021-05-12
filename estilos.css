@@ -1,7 +1,11 @@
 /* TOP */
 
 .topColor{
-	background-color: #1e8a71;
+	background-color: black;
+}
+
+.a{
+	color: white;
 }
 
 /* MENU */
@@ -14,18 +18,41 @@
 /* BODY */
 
 body{
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	background-color: gray;
+	background-color: #2941ab;
 }
 
-.body{
-	background-color: gray;
+
+/* HOME */
+
+.fondoDivHome{
+	background-image: url(https://www-growth.scdn.co/static/home/bursts.svg);
+	background-size: 120%;
+	height: 800px;
+	background-position: 46% 4%;
+}
+
+.divTituloHome{
+	margin: auto;
+	width: 700px;
+	text-align: center;
+	position: relative;
+	display: inline-block;
+	top: 45%; left: 50%;
+	transform: translate(-45%,-50%);
+}
+
+.tituloHome{
+	color: #1ed760;
+	font-size: 150px;
 }
 
 /* FOOTER */
 
 .footer{
-	margin-top: auto;
+	position: relative;
+	margin-top: 0px; 
+}
+
+.topCol{
+	margin-top: 30px;
 }
