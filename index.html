@@ -10,17 +10,18 @@
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 
-	<link rel="stylesheet" href="estilos.css?1.0" media="all">
+	<link rel="stylesheet" href="estilos.css?6.0" media="all">
 
 </head>
 <body>
 	
+	<!-- TOP -->
 
 	<div class="container-fluid topColor">
 		<div class="container">
 			<div class="row">
 				<div class="col-8">
-					<h3 class="a"> Lost Song </h3>
+					<h3 style="color: white"> Lost Song </h3>
 				</div>
 				<div class="col-4">
 					
@@ -28,26 +29,29 @@
 			</div>
 		</div>
 	</div>
-	
+
+	<!-- MENU -->
 
 	<div class="container-fluid menuTop" style="background-color: black; color: white">
 		<div class="container">
 			<nav class="navbar navbar-expand-lg">
 				<div class="collapse navbar-collapse">
 					<ul class="navbar-nav mr-auto">
-						<li class="nav-item active">
+						<li id="btnHome" class="nav-item active">
 							Home
 						</li>
-						<li class="nav-item">
+						<li id="btnCatalogo" class="nav-item">
 							Catalogue
 						</li>
-						<li class="nav-item">
+						<li id="btnArtists" class="nav-item">
 							Artists
 						</li>
 					</ul>
 					<ul class="navbar-nav navbar-right">
 						<li class="nav-item">
-							<i class="fas fa-user fa-xs"> </i> <span>Account</span> 
+							<div class="dropdown">
+								<i class="fas fa-shopping-cart fa-xs"> </i> <span>Cart</span>
+							</div>
 						</li>
 					</ul>
 				</div>
@@ -56,13 +60,110 @@
 		</div>
 	</div>
 
-	<div class="container-fluid fondoDivHome">
-		
+	<!-- BODY -->
+
+	<!-- Home -->
+
+	<div id="home" class="container-fluid fondoDivHome">
 		<div class="divTituloHome">
-			<h1 class="tituloHome"> Escuchar lo es todo </h1>
+			<div id="mainHome">
+				<h1 class="tituloHome"> Escuchar lo es todo </h1>
+			</div>
+			<!--
+			<div id="homeForm">
+				<h3> LOG IN </h3>
+				<div class="form-group">
+					<label style="color: white"> Username </label>
+					<input id="userlogin" type="text" class="form-control" placeholder="Username">
+				</div>
+				<div class="form-group">
+					<label style="color: white"> Password </label>
+					<input id="passlogin" type="password" class="form-control" placeholder="Password">
+				</div>
+				<button id="btn-submit" type="submit" class="btn btn-dark"> Log In </button>
+			</div>
+			<div id="signUpHomeForm">
+				<h3> SIGN UP </h3>
+				<div class="form-group">
+					<label style="color: white"> Username </label>
+					<input id="userSignup" type="text" class="form-control" placeholder="Username">
+				</div>
+				<div class="form-group">
+					<label style="color: white"> Password </label>
+					<input id="passSignup" type="password" class="form-control" placeholder="Password">
+				</div>
+				<button id="btn-SignUpSubmit" type="submit" class="btn btn-dark"> Sign Up </button>
+			</div>
+			-->
 		</div>
 
 	</div>
+
+	<!-- Catalogo -->
+
+	<div id="catalogo" class="container-fluid fondoDivHome">
+		<div class="container">
+			<button type="button" id="btn-catalogo" class="btn btn-dark"> < </button>
+			<div class="row card-deck">
+				<div class="col-sm-4">
+					<div id="hiphop" class="card hiphopCard">
+						<img class="card-img-top" src="imgs/cover_hiphop.jpg" alt="Hip Hop Image">
+						<div class="card-body">
+							<p class="card-text textCards"> HIP HOP </p>	
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div id="pop" class="card popCard">
+						<img class="card-img-top" src="imgs/cover_pop.jpg" alt="Pop Image">
+						<div class="card-body">
+							<p class="card-text textCards"> POP </p>	
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div id="latina" class="card latinaCard">
+						<img class="card-img-top" src="imgs/cover_latina.jpg" alt="Latina Image">
+						<div class="card-body">
+							<p class="card-text textCards"> LATINA </p>	
+						</div>
+					</div>
+				</div>		
+			</div>
+		</div>
+
+	</div>
+
+	<div id="hiphopCatalogue" class="container-fluid fondoDivHome">
+		<button type="button" id="btn-hiphopcatalogos" class="btn btn-dark"> < </button>
+		<div id="hiphopHome">
+			
+		</div>
+	</div>
+
+	<div id="popCatalogue" class="container-fluid fondoDivHome">
+		<button type="button" id="btn-popcatalogos" class="btn btn-dark"> < </button>
+		<div id="popHome">
+			
+		</div>
+	</div>
+
+	<div id="latinaCatalogue" class="container-fluid fondoDivHome">
+		<button type="button" id="btn-latinacatalogos" class="btn btn-dark"> < </button>
+		<div id="latinaHome">
+			
+		</div>
+	</div>
+
+	<!-- Artistas -->
+
+	<div id="artists" class="container-fluid fondoDivHome">
+
+		Artists
+
+	</div>
+
+	<!-- FOOTER -->
 
 	<div class="container-fluid footer" style="background-color: black">
 		<div class="container">
@@ -90,6 +191,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
+	<script src="main.js"></script>
 
 </body>
 </html>

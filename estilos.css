@@ -21,6 +21,26 @@ body{
 	background-color: #2941ab;
 }
 
+.divBoton{
+	margin-top: 30px;
+}
+
+#btn-catalogo{
+	margin: 10px 10px 10px 10px;
+}
+
+#btn-hiphopcatalogos{
+	margin: 10px 10px 10px 10px;
+}
+
+#btn-popcatalogos{
+	margin: 10px 10px 10px 10px;
+}
+
+#btn-latinacatalogos{
+	margin: 10px 10px 10px 10px;
+}
+
 
 /* HOME */
 
@@ -44,6 +64,29 @@ body{
 .tituloHome{
 	color: #1ed760;
 	font-size: 150px;
+}
+
+/* CATALOGUE */
+
+.textCards{
+	color: white !important;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.hiphopCard{
+	background-color: black;
+	border: none;
+}
+
+.popCard{
+	background-color: #bc0438;
+	border: none;
+}
+
+.latinaCard{
+	background-color: #5e3016;
+	border: none;
 }
 
 /* FOOTER */
