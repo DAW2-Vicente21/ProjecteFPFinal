@@ -10,21 +10,39 @@
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 
-	<link rel="stylesheet" href="estilos.css?6.0" media="all">
+	<link rel="stylesheet" href="estilos.css?24.0" media="all">
 
 </head>
 <body>
 	
+	<div class="wrapper">
+		
 	<!-- TOP -->
 
 	<div class="container-fluid topColor">
 		<div class="container">
 			<div class="row">
-				<div class="col-8">
+				<div class="col-4">
 					<h3 style="color: white"> Lost Song </h3>
 				</div>
-				<div class="col-4">
-					
+				<div id="topLogin" class="col-8" style="color: white">
+					<div class="loginSignupStart">
+						<span class="logInF" style="color: white; float: right;"> Log In </span>
+						<span class="signUpF" style="color: white; float: right; margin-right: 35px;"> Sign Up </span>
+					</div>
+					<div class="loginSignup">
+						
+					</div>
+					<iframe style="display: none" id="target"></iframe>
+					<div class="formLogin">
+
+					</div>
+					<div class="formSignUp">
+
+					</div>
+					<div class="logout">
+						<span class="logOutF" style="color: white; float: right;"> Log Out </span>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -43,13 +61,15 @@
 						<li id="btnCatalogo" class="nav-item">
 							Catalogue
 						</li>
+						<!--
 						<li id="btnArtists" class="nav-item">
 							Artists
 						</li>
+						-->
 					</ul>
 					<ul class="navbar-nav navbar-right">
 						<li class="nav-item">
-							<div class="dropdown">
+							<div id="btnCart" class="dropdown">
 								<i class="fas fa-shopping-cart fa-xs"> </i> <span>Cart</span>
 							</div>
 						</li>
@@ -67,7 +87,7 @@
 	<div id="home" class="container-fluid fondoDivHome">
 		<div class="divTituloHome">
 			<div id="mainHome">
-				<h1 class="tituloHome"> Escuchar lo es todo </h1>
+				<h1 class="tituloHome"> Just a click away </h1>
 			</div>
 			<!--
 			<div id="homeForm">
@@ -103,32 +123,33 @@
 
 	<div id="catalogo" class="container-fluid fondoDivHome">
 		<div class="container">
-			<button type="button" id="btn-catalogo" class="btn btn-dark"> < </button>
-			<div class="row card-deck">
-				<div class="col-sm-4">
-					<div id="hiphop" class="card hiphopCard">
-						<img class="card-img-top" src="imgs/cover_hiphop.jpg" alt="Hip Hop Image">
-						<div class="card-body">
-							<p class="card-text textCards"> HIP HOP </p>	
+			<div id="cardsMargin">
+				<div class="row card-deck">
+					<div class="col-sm-4">
+						<div id="hiphop" class="card hiphopCard">
+							<img class="card-img-top" src="imgs/cover_hiphop.jpg" alt="Hip Hop Image">
+							<div class="card-body">
+								<p class="card-text textCards"> HIP HOP </p>	
+							</div>
 						</div>
 					</div>
+					<div class="col-sm-4">
+						<div id="pop" class="card popCard">
+							<img class="card-img-top" src="imgs/cover_pop.jpg" alt="Pop Image">
+							<div class="card-body">
+								<p class="card-text textCards"> POP </p>	
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div id="latina" class="card latinaCard">
+							<img class="card-img-top" src="imgs/cover_latina.jpg" alt="Latina Image">
+							<div class="card-body">
+								<p class="card-text textCards"> LATINA </p>	
+							</div>
+						</div>
+					</div>		
 				</div>
-				<div class="col-sm-4">
-					<div id="pop" class="card popCard">
-						<img class="card-img-top" src="imgs/cover_pop.jpg" alt="Pop Image">
-						<div class="card-body">
-							<p class="card-text textCards"> POP </p>	
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-4">
-					<div id="latina" class="card latinaCard">
-						<img class="card-img-top" src="imgs/cover_latina.jpg" alt="Latina Image">
-						<div class="card-body">
-							<p class="card-text textCards"> LATINA </p>	
-						</div>
-					</div>
-				</div>		
 			</div>
 		</div>
 
@@ -155,16 +176,28 @@
 		</div>
 	</div>
 
-	<!-- Artistas -->
+	<!-- Cart -->
 
-	<div id="artists" class="container-fluid fondoDivHome">
-
-		Artists
-
+	<div id="cart" class="container-fluid fondoDivHome">
+		<div id="cartDiv">
+			
+		</div>
 	</div>
 
-	<!-- FOOTER -->
+	<!-- Compra -->
 
+	<div id="compra" class="container-fluid fondoDivHome">
+		<div id="cartDiv">
+
+		</div>
+	</div>
+
+	<div id="compraSuccess">
+		
+	</div>
+	
+	<!-- FOOTER -->
+	<!--
 	<div class="container-fluid footer" style="background-color: black">
 		<div class="container">
 			<div class="row">
@@ -172,16 +205,18 @@
 					<h2 style="color: white"> Lost Song </h2>
 				</div>
 				<div class="col-3 topCol">
-					<p style="color: #919496"> Contacte </p>
-						<p style="color: white"> mail </p>
-						<p style="color: white"> adress </p>
-						<p style="color: white"> phone </p>
+					<p style="color: #919496"> Contact </p>
+						<p style="color: white"> Mail </p>
+						<p style="color: white"> Adress </p>
+						<p style="color: white"> Phone </p>
 				</div>
 				<div class="col-3 topCol">
 					<p style="color: #919496"> Social Media </p>
 				</div>
 			</div>
 		</div>
+	</div>
+	-->
 	</div>
 
 

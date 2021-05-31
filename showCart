@@ -1,0 +1,19 @@
+<?php 
+	
+	echo "hola";
+
+	include('database_connection.php');
+
+	$query = "SELECT numItem, id_cd FROM cart";
+	$result = mysqli_query($connect, $query);
+
+
+	while($row = mysqli_fetch_array($result)){
+
+			echo "<p>" .$row['numItem']. "</p>";
+			echo "<p>" .$row['id_cd']. "</p>";
+	
+	}
+
+
+?>
